@@ -138,12 +138,18 @@
       <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
           <li class="active nav-item"><a href="/admin" up-target=".main" up-transition="move-right"><i class="ft-home"></i><span class="menu-title" data-i18n="">Dashboard</span></a>
+          </li> 
+          <li class=" nav-item"><a href="#"><i class="ft-layers"></i><span class="menu-title" data-i18n="">Star</span></a>
+            <ul class="menu-content">
+              <li><a class="menu-item" href="/admin/data_model" up-target=".main" up-transition="move-right">Model</a>
+              </li>
+            </ul>
           </li>          
           <li class=" nav-item"><a href="#"><i class="ft-layers"></i><span class="menu-title" data-i18n="">Portal management</span></a>
             <ul class="menu-content">
               <li><a class="menu-item" href="/admin/activity" up-target=".main" up-transition="move-right">Activity Monitor</a>
               </li>
-              <li><a class="menu-item" href="/admin/user" up-target=".main" up-transition="move-right">User management</a>
+              <li><a class="menu-item" href="/admin/user" up-target=".main" up-transition="move-right">User management</a></li>
             </ul>
           </li>
         </ul>

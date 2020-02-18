@@ -56,6 +56,12 @@ defmodule Portafolio.Account do
     |> Repo.insert()
   end
 
+  def create_model(attrs \\ %{}) do
+    %User{}
+    |> User.model_registration_changeset(attrs)
+    |> Repo.insert()
+  end
+
   def create_user_frontend(attrs \\ %{}) do
     %User{}
     |> User.front_registration_changeset(attrs)

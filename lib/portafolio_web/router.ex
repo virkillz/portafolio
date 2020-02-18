@@ -31,6 +31,8 @@ defmodule PortafolioWeb.Router do
     get("/locked", UserController, :locked)
     resources("/activity", ActivityController, only: [:index, :show, :delete])
     resources("/user", UserController)
+    resources("/data_model", DataModelController)
+
     get("/logout", UserController, :logout)
   end
 

@@ -1,0 +1,325 @@
+<!-- BATASSSSS --->
+
+<div class="content-header row">
+  <div class="content-header-left col-md-4 col-12 mb-2">
+    <h3 class="content-header-title">Show Data model</h3>
+  </div>
+  <div class="content-header-right col-md-8 col-12">
+    <div class="breadcrumbs-top float-md-right">
+      <div class="breadcrumb-wrapper mr-1">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/admin">Home</a>
+          </li>
+          <li class="breadcrumb-item"><a href="/admin/Data model">Data model</a>
+          </li>                  
+          <li class="breadcrumb-item active">Show
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>          
+<div class="content-body"><!-- Revenue, Hit Rate & Deals -->  
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">User Information</h4>
+          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+            </ul>
+          </div>
+        </div>
+        <div class="card-content collapse show">
+          <div class="card-body p-0 pb-0">
+
+
+
+            <div class="container">
+              <form class="form-horizontal" role="form">     
+
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-4">
+                      <img alt="Model" src="<%= @data_model.user.avatar %>">
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">User ID:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static"><%= @data_model.user.id %></p>
+                      </div>
+                    </div>                                               
+
+                    
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Full Name:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static"><%= @data_model.user.fullname %></p>
+                      </div>
+                    </div>  
+                    
+                    
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Email:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static"><%= @data_model.user.email %></p>
+                      </div>
+                    </div>                 
+
+                  </div>
+                </div>
+                
+                
+              </form>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">General Information</h4>
+          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+            </ul>
+          </div>
+        </div>
+        <div class="card-content collapse show">
+          <div class="card-body p-0 pb-0">
+
+
+
+            <div class="container">
+              <form class="form-horizontal" role="form">     
+                
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Ethnicity:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.ethnicity %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Nationality:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.nationality %></p>
+                  </div>
+                </div> 
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Rating:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.rating %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Rangking:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.rangking %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Level:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.level %></p>
+                  </div>
+                </div> 
+                
+                
+              </form>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Head Information</h4>
+          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+            </ul>
+          </div>
+        </div>
+        <div class="card-content collapse show">
+          <div class="card-body p-0 pb-0">
+
+
+
+            <div class="container">
+              <form class="form-horizontal" role="form">                                     
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Eye color:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.eye_color %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Lip type:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.lip_type %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Hair color:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.hair_color %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Hair type:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.hair_type %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Hair style:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.hair_style %></p>
+                  </div>
+                </div>  
+                
+              </form>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Body Detail</h4>
+          <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+            </ul>
+          </div>
+        </div>
+        <div class="card-content collapse show">
+          <div class="card-body p-0 pb-0">
+
+
+
+            <div class="container">
+              <form class="form-horizontal" role="form">                                     
+
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Height:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.height %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Weight:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.weight %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Waist size:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.waist_size %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Hip size:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.hip_size %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Chest size:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.chest_size %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Bust size:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.bust_size %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Skin type:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.skin_type %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Body size:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.body_size %></p>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Body type:</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><%= @data_model.model.body_type %></p>
+                  </div>
+                </div>  
+
+                <div class="form-group">
+                  <div class="col-sm-2"></div>
+                  <div class="col-sm-10">
+                    <a href="<%= data_model_path(@conn, :index) %>" class="btn btn-primary">Close</a>
+                  </div>
+                </div>                                                                                                                          
+              </form>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+

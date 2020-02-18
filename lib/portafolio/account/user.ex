@@ -39,14 +39,13 @@ defmodule Portafolio.Account.User do
     |> validate_required([:fullname, :username, :avatar])
   end
 
-  def registration_changeset(%User{} = user, attrs) do
+  def model_registration_changeset(%User{} = user, attrs) do
     user
     |> cast(attrs, [
       :fullname,
       :avatar,
       :role,
       :is_active,
-      :username,
       :password,
       :repassword,
       :email,
@@ -54,11 +53,31 @@ defmodule Portafolio.Account.User do
       :bio,
       :location
     ])
-    |> validate_required([:fullname, :username, :password])
-    |> validate_length(:username, min: 3, max: 16)
+    |> validate_required([:fullname, :password])
     |> validate_length(:password, min: 5)
     |> validate_password
-    |> unique_constraint(:username)
+    |> put_default_avatar()
+    |> put_password_hash()
+    |> put_role("model")
+  end
+
+  def registration_changeset(%User{} = user, attrs) do
+    user
+    |> cast(attrs, [
+      :fullname,
+      :avatar,
+      :role,
+      :is_active,
+      :password,
+      :repassword,
+      :email,
+      :mobile,
+      :bio,
+      :location
+    ])
+    |> validate_required([:fullname, :password])
+    |> validate_length(:password, min: 5)
+    |> validate_password
     |> put_password_hash()
     |> put_role("administrator")
   end
@@ -92,7 +111,7 @@ defmodule Portafolio.Account.User do
   end
 
   def put_default_avatar(changeset) do
-    change(changeset, avatar: "/img/avatar-round-3.png")
+    change(changeset, avatar: "/img/default-avatar.png")
   end
 
   def put_verificationhash(changeset) do

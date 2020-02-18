@@ -1,0 +1,83 @@
+
+       <div class="content-header row">
+          <div class="content-header-left col-md-4 col-12 mb-2">
+            <h3 class="content-header-title">Data model List</h3>
+          </div>
+          <div class="content-header-right col-md-8 col-12">
+            <div class="breadcrumbs-top float-md-right">
+              <div class="breadcrumb-wrapper mr-1">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/admin">Home</a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="/admin/data_model">Model</a>
+                  </li>                  
+                  <li class="breadcrumb-item active">List
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>          
+        <div class="content-body"><!-- Revenue, Hit Rate & Deals -->  
+
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Data model List</h4>
+                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li>
+                          <a href="<%= data_model_path(@conn, :new) %>"><button class="btn btn-bg-gradient-x-red-pink"><i class="ft ft-plus"></i> Create New Model</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-content collapse show">
+                <div class="card-body p-0 pb-0">
+<br>
+
+
+<div class="container">
+
+                            <table class="table">
+                                <thead class="bg-primary white">
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Full Name</th>
+                                  <th>Email</th>
+                            
+                                  <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                  <%= for data_model <- @data_model do %>
+                                      <tr>
+                                        <td><%= data_model.id %></td>
+                                        <td><%= data_model.fullname %></td>
+                                        <td><%= data_model.email %></td>
+                                  
+                                        <td class="text-right">
+                                          <span><%= link "Show", to: data_model_path(@conn, :show, data_model), class: "btn btn-default btn-xs" %></span>
+                                          <span><%= link "Edit", to: data_model_path(@conn, :edit, data_model), class: "btn btn-default btn-xs" %></span>
+                                          <span><%= link "Delete", to: data_model_path(@conn, :delete, data_model), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+                                        </td>
+                                      </tr>
+                                  <% end %>
+                                </tbody>
+                            </table>
+
+</div>
+<br>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
