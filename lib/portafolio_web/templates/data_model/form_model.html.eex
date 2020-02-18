@@ -1,49 +1,60 @@
   <div class="panel panel-default">
-      <div class="panel-body">
-<%= form_for @changeset, @action,[multipart: true], fn f -> %>
-  <%= if @changeset.action do %>
-    <div class="alert alert-danger">
-      <p>Oops, something went wrong! Please check the errors below.</p>
+    <div class="panel-body">
+      <%= form_for @changeset, @action,[multipart: true, class: "form form-horizontal"], fn f -> %>
+      <%= if @changeset.action do %>
+      <div class="alert alert-danger">
+        <p>Oops, something went wrong! Please check the errors below.</p>
+      </div>
+      <% end %>
+
+      <div class="form-group row">
+        <label class="col-md-3 label-control" for="projectinput5">Full Name</label>
+        <div class="col-md-9">
+          <%= text_input f, :fullname, class: "form-control" %>
+          <%= error_tag f, :fullname %>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-3 label-control" for="projectinput5">Email</label>
+        <div class="col-md-9">
+          <%= email_input f, :email, class: "form-control" %>
+          <%= error_tag f, :email %>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-3 label-control" for="projectinput5">Password</label>
+        <div class="col-md-9">
+          <%= password_input f, :password, class: "form-control" %>
+          <%= error_tag f, :password %>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-3 label-control" for="projectinput5">Repeat Password</label>
+        <div class="col-md-9">
+          <%= password_input f, :repassword, class: "form-control" %>
+          <%= error_tag f, :repassword %>
+        </div>
+      </div> 
+
+      <div class="form-group row">
+        <label class="col-md-3 label-control" for="projectinput5">Phone Number</label>
+        <div class="col-md-9">
+          <%= text_input f, :mobile, class: "form-control" %>
+          <%= error_tag f, :mobile %>
+        </div>
+      </div>            
+
+
+
+
+      <div class="form-group">
+        <%= submit "Submit", class: "btn btn-primary" %>
+        <%= link "Cancel", to: user_path(@conn, :index), class: "btn btn-warning" %>
+      </div>
+      <% end %>
+
     </div>
-  <% end %>
-
-  <div class="form-group">
-    <%= label f, "Full Name", class: "control-label" %>
-    <%= text_input f, :fullname, class: "form-control" %>
-    <%= error_tag f, :fullname %>
   </div>
-
-
-  <div class="form-group">
-    <%= label f, :email, class: "control-label" %>
-    <%= text_input f, :email, class: "form-control" %>
-    <%= error_tag f, :email %>
-  </div>
-
-  <div class="form-group">
-    <%= label f, :password, class: "control-label" %>
-    <%= password_input f, :password, class: "form-control" %>
-    <%= error_tag f, :password %>
-  </div>
-
-  <div class="form-group">
-    <%= label f, "Repeat Password", class: "control-label" %>
-    <%= password_input f, :repassword, class: "form-control" %>
-    <%= error_tag f, :repassword %>
-  </div>  
-
-  <div class="form-group">
-    <%= label f, "Mobile Number", class: "control-label" %>
-    <%= text_input f, :mobile, class: "form-control" %>
-    <%= error_tag f, :mobile %>
-  </div>
-
-
-  <div class="form-group">
-    <%= submit "Submit", class: "btn btn-primary" %>
-    <%= link "Cancel", to: user_path(@conn, :index), class: "btn btn-warning" %>
-  </div>
-<% end %>
-
-</div>
-</div>

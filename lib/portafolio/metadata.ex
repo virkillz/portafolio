@@ -56,6 +56,10 @@ defmodule Portafolio.Metadata do
     end
   end
 
+  def get_data_model!(id) do
+    Repo.get!(DataModel, id)
+  end
+
   @doc """
   Creates a data_model.
 

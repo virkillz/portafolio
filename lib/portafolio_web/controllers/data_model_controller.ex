@@ -44,7 +44,7 @@ defmodule PortafolioWeb.DataModelController do
 
   def show(conn, %{"id" => id}) do
     data_model = Metadata.get_data_model(id) |> IO.inspect()
-    render(conn, "show.html", data_model: data_model)
+    render(conn, "show_model.html", data_model: data_model)
   end
 
   def edit(conn, %{"id" => id}) do

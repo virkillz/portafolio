@@ -45,8 +45,8 @@
                                 <thead class="bg-primary white">
                                 <tr>
                                   <th>ID</th>
-                                  <th>Full Name</th>
-                                  <th>Email</th>
+                                  <th>Model Info</th>
+                                  <th>Phone Number</th>
                             
                                   <th></th>
                                 </tr>
@@ -55,13 +55,26 @@
                                   <%= for data_model <- @data_model do %>
                                       <tr>
                                         <td><%= data_model.id %></td>
-                                        <td><%= data_model.fullname %></td>
-                                        <td><%= data_model.email %></td>
+                                      <td>
+
+                                        <div class="d-flex align-items-center">
+                                        <div class="pr-1">
+                                        <img src="<%= data_model.avatar %>" class="user-image img-circle rounded-circle" alt="User Image" height="50px" /> 
+                                        </div>
+                                        <div>
+                                        <strong> <%= data_model.fullname %></strong><br><%= data_model.email %>
+                                        </div>
+                                      </div>
+
+
+                                      </td>
+                                        
+                                        <td><%= data_model.mobile %></td>
                                   
                                         <td class="text-right">
                                           <span><%= link "Show", to: data_model_path(@conn, :show, data_model), class: "btn btn-default btn-xs" %></span>
                                           <span><%= link "Edit", to: data_model_path(@conn, :edit, data_model), class: "btn btn-default btn-xs" %></span>
-                                          <span><%= link "Delete", to: data_model_path(@conn, :delete, data_model), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+                                          <span><%= link "Delete", to: user_path(@conn, :delete, data_model), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
                                         </td>
                                       </tr>
                                   <% end %>

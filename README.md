@@ -25,22 +25,13 @@ You can register as a regular user.
 You can visit [`localhost:4000/admin`](http://localhost:4000/admin) and login using username 'administrator' and passsword 'administrator'
 
 
-## Use Portafolio Generator instead of phoenix!
-You probably familiar using `phx.gen.html` like this:
+### TODO
 
-`mix phx.gen.html Content Post post title:string content:string is_published:boolean`
-
-Instead, you better use:
-
-`mix portafolio.gen.html Content Post post title:string content:string is_published:boolean`
-
-The later one will give nicer html output.
-
-Put `resources "/post", PostController` in the router `/lib/Yourapp_web/router.ex`
-
-Run migration `mix ecto.migrate`
-
-Add link to your menu at '/lib/Yourapp_web/templates/layout/app.html.eex'
-
-Bam it's done!
+- [ ] Show accurate data in dashboard.
+- [ ] Ability to edit Avatar
+- [ ] Ability to edit Model Data
+- [ ] Search and Filter Model
+- [ ] Waive username
+- [ ] Add stagename [??]
+- [ ] 
 
